@@ -40,14 +40,10 @@ def map_to_double(source_array)
   p new_array
 end 
 
-def reduce_to_total(source_array, starting_point)
+def reduce_to_total(source_array, starting_point=0)
   i = 0 
   while i < source_array.length do 
-    if starting_point 
-      starting_point += source_array[i]
-    else 
-      starting_point = 0 
-      starting_point += source_array[i]
+    starting_point += source_array[i]
     i += 1 
   end 
   p starting_point 
